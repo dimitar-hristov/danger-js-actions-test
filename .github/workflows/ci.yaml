@@ -8,6 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Danger
-        uses: danger/danger-js@9.1.6
+        uses: docker://ghcr.io/danger/danger:master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
