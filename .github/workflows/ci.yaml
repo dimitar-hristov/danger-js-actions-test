@@ -11,3 +11,9 @@ jobs:
         uses: docker://ghcr.io/danger/danger-js:11.2.7
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Danger-Foo
+        uses: docker://ghcr.io/danger/danger-js:11.2.7
+        with:
+          args: "--dangerfile dangerfile-foo.js"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
